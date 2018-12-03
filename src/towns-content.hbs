@@ -1,0 +1,38 @@
+<div class="main">
+    <div class="filter">
+        <div id="nameUser" class="filter__header">
+        </div>
+
+        <div class="filter__one">
+            <div class="filter__search">
+            </div>
+            <div class="filter__title">
+                Ваши друзья
+            </div>
+            <div id="results">
+
+            </div>
+        </div>
+
+    </div>
+    <script id="user-template" type="text/x-handlebars-template">
+        <ul class="friends">
+            {{#each items}}
+            <li class="friend">
+                <span class="friend__foto">
+                    <img src="{{photo_100}}" alt="">
+                </span>
+                <span class="friend__name">
+                    {{first_name}} {{last_name}}
+                </span>
+                <span class="friend__add">
+
+                </span>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+</div>
+
+
