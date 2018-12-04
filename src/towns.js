@@ -1,3 +1,5 @@
+import renderFriendsFn from './templates/friends.hbs'
+
 VK.init({
   apiId: 6771075
 });
@@ -35,13 +37,16 @@ function callAPI(method, params) {
 
     headerInfo.textContent = `Выберите друзей ${me.first_name} ${me.last_name}`;
     
-    const friends = await callAPI('friends.get', { friends: 'city, country, photo_100' });
-    const template = document.querySelector("#user-template").textContent;
-    const render = Handlebars.compile(template);
-    const html = render(friends);
-    const results = document.querySelector("#results");
+    const friends = await callAPI('friends.get', { friends: 'city, last_name, photo_100' });
+    // const template = document.querySelector("#user-template").textContent;
+    // const render = Handlebars.compile(template);
+    // const html = render(friends);
+    const results = document.querySelector(".friends");
+    const friendsHTML = renderFriendsFn({ friends });
     
-    results.innerHTML = html;
+    results.innerHTML = friendsHTML;
+
+    console.log(friends)
 
   } catch (e) {
     console.error(e);
