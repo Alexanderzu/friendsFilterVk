@@ -1,12 +1,12 @@
 {{#each friends}}
-<li class="friend">
+<li class="friend" draggable="true" >
     <span class="friend__foto">
-        <img src="{{photo_100}}" alt="">
+        <img src="{{photo_50}}" alt="">
     </span>
     <span class="friend__name">
         {{first_name}} {{last_name}}
     </span>
-    <span class="friend__add">
+    <span class="friend__add" data-id="{{id}}">
 
     </span>
 </li>

@@ -2,20 +2,40 @@
     <div class="filter">
         <div id="nameUser" class="filter__header">
         </div>
+        <div class="filter__content">
+            <div class="filter__item">
+                <div class="filter__search">
+                    <input type="text" id="filterInputVK" placeholder="Начните вводите имя друга">
+                </div>
+                <div class="filter__title">
+                    Ваши друзья
+                </div>
+                <div class="filter__result" id="results">
+                    <ul class="friends">
 
-        <div class="filter__one">
-            <div class="filter__search">
+                    </ul>
+                </div>
             </div>
-            <div class="filter__title">
-                Ваши друзья
-            </div>
-            <div id="results">
-                <ul class="friends">
 
-                </ul>
+            <div class="filter__item">
+                <div class="filter__search">
+                    <input type="text" id="filterInputMy"  placeholder="Имя">
+                </div>
+                <div class="filter__title">
+                    Друзья в списке
+                </div>
+                <div class="filter__result" >
+                    <ul class="friends-new">
+
+                    </ul>
+                </div>
+            
             </div>
+
         </div>
-
+        <div class="filter__footer">
+            <button class="filter__save">Сохранить</button>
+        </div>
     </div>
 </div>
 
